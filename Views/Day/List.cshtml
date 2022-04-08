@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Day>
+
+    <div>
+        <h1>Task List</h1>
+        <div>
+            <ul class="list-unstyled">
+                <li>
+                    @foreach (var day in Model)
+                    {
+                        <a asp-controller="Day" asp-action="Detail" asp-route-id="@day.Id" class="btn"><h2>@day.Date.ToString("dddd, dd MMMM yyyy")</h2></a>
+                    }
+                </li>
+            </ul>
+        </div>
+    </div>

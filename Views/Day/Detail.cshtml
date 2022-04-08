@@ -1,0 +1,12 @@
+﻿@model Day
+
+<div class="container">
+    <h1>@Model.Date</h1>
+    <ul>
+        @foreach (var item in Model.Items)
+        {
+            <li>@item.Category.CategoryName: @item.SubCategory.SubCategoryName----Time: @item.Time</li>
+
+        }
+    </ul>
+</div>
